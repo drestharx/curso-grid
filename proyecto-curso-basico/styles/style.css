@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 2fr minmax(100px, 3fr);
+    border-bottom: 1px solid #ddd;
+  }
+
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /*ajustara la imagen al contenedor, y contain hara que se ubique para verse completa */
+}
+
+.info {
+    align-self: center;
+    padding-left: 50px;
+}
+
+.info-title {
+    font-size: 3rem;
+    font-weight: bolder;
+}
+
+.info-subtitle {
+    margin-top: 15px;
+    font-size: 1.4rem;
+}
+
+.info button {
+    color: black;
+    cursor: pointer;
+    margin-top: 15px;
+    padding: 8px;
+    border: none;
+    background-color: orange;
+    border-radius: 14px;
+    font-weight: 700;
+}
+
+.dishes-title {
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 15px;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.dishes {
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 250px));
+    grid-auto-rows: 1fr;
+    gap: 8px;
+    justify-content: center;
+}
+
+.dishes-item {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.dishes-item__big {
+    grid-area: 1 / 1 / 3 / 3; /*Se especifica primero donde inicia la fila y columna y despues donde finaliza fila y columna*/
+}
+
+.menu {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu .menu-title {
+    margin: 25px 0 15px 0;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(100px, 200px));
+    gap: 10px;
+    margin-bottom: 50px;
+}
+
+.menu-grid__img-container {
+    width: 100%;
+    height: 100%;
+    background-color: coral;
+    border-top-left-radius: 30px;
+}
+
+.img__menu-grid {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+@media screen and (max-width: 768px) {
+    .hero {
+        grid-template-columns: minmax(320px, 500px);
+    }
+
+    .hero-img {
+        display: none;
+    }
+
+}
